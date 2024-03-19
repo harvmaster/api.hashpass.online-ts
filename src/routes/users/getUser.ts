@@ -14,7 +14,7 @@ const getUser: RequestHandler = async (req: AuthenticatedRequest<{}, {}>, res: R
   const formattedServices = await Promise.all(services.map(async (service) => service.toJSONData()));
 
   return res.json({
-    ...user.toAuthJSON(),
+    user: user.toAuthJSON(),
     services: formattedServices,
   });
 }
