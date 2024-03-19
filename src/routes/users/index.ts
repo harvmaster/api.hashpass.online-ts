@@ -13,7 +13,7 @@ import createUser from './createUser';
 const router = Express.Router();
 
 router.get('/user', validateAccessToken, getUser);
-router.get('/users/all', validateAccessToken, getAllUsers);
+router.get('/users/all', getAllUsers);
 
 router.delete('/user/delete/:id', validateAccessToken, deleteUser);
 
